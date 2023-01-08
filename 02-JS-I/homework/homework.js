@@ -7,7 +7,7 @@ const nuevaString = "hola";
 const nuevoNum = 9;
 
 // Crea una variable booleana:
-const nuevoBool = True;
+const nuevoBool = true;
 
 // Resuelve el siguiente problema matemático:
 const nuevaResta = 10 - 5 === 5;
@@ -37,32 +37,28 @@ function suma(x, y) {
   // "x" e "y" son números
   // Suma "x" e "y" juntos y devuelve el valor
   // Tu código:
-  suma=x+y
-  return suma
+  return x+y
 }
 console.log(suma(2,4))
 
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-  resta=y-x
-  return resta
+  return x-y
 }
 console.log(resta(2,4))
 
 function multiplica(x, y) {
   // Multiplica "x" por "y" y devuelve el valor
   // Tu código:
-  multiplica=x*y
-  return multiplica
+  return x*y
 }
 console.log(multiplica(2,4))
 
 function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
-  divide=x/y
-  return divide
+  return x/y
 }
 console.log(divide(2,4))
 
@@ -151,47 +147,42 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  elevarAlCuadrado=Math.pow(num,2)
-  return elevarAlCuadrado
+  return Math.pow(num,2)
 }
 console.log(elevarAlCuadrado(4))
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  elevarAlCubo=Math.pow(num,3)
-  return elevarAlCubo
+  return Math.pow(num,3)
 }
 console.log(elevarAlCubo(4))
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  elevar=Math.pow(num,exponent)
-  return elevar
+  return Math.pow(num,exponent)
 }
 console.log(elevar(4,4))
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  redondearNumero=Math.round(num)
-  return redondearNumero
+  return Math.round(num)
 }
 console.log(redondearNumero(4.3))
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  redondearHaciaArriba=Math.ceil(num)
+  return Math.ceil(num)
 }
 console.log(redondearHaciaArriba(4.3))
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  numeroRandom=Math.random()
-  return numeroRandom()
+  return Math.random()
 }
 
 function esPositivo(numero) {
@@ -199,6 +190,8 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
+  if(numero===0)
+  return false
   if(numero>=0)
   return "Es positivo"
   else
@@ -211,8 +204,7 @@ function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
-  agregarSimboloExclamacion=str+"!"
-  return agregarSimboloExclamacion
+  return str+"!"
 }
 console.log(agregarSimboloExclamacion("hola mundo"))
 
@@ -220,8 +212,7 @@ function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  combinarNombres = nombre + " " + apellido
-  return combinarNombres
+  return nombre + " " + apellido
 }
 console.log(combinarNombres("Luis", "Castillo"))
 
@@ -229,16 +220,14 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  obtenerSaludo = "Hola " + nombre + "!"
-  return obtenerSaludo
+  return "Hola " + nombre + "!"
 }
 console.log(obtenerSaludo("Luis"))
 
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
-  obtenerAreaRectangulo = alto * ancho
-  return obtenerAreaRectangulo
+  return alto * ancho
 }
 console.log(obtenerAreaRectangulo(5,4))
 
@@ -246,8 +235,7 @@ console.log(obtenerAreaRectangulo(5,4))
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-  retornarPerimetro=lado*4
-  return retornarPerimetro
+  return lado*4
 }
 console.log(retornarPerimetro(5))
 
@@ -255,8 +243,7 @@ console.log(retornarPerimetro(5))
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
- areaDelTriangulo=(base*altura)/2
- return areaDelTriangulo
+ return (base*altura)/2
 }
 console.log(areaDelTriangulo(4,2))
 
@@ -264,8 +251,7 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  deEuroAdolar=euro*1.2
-  return deEuroAdolar
+  return euro*1.2
 }
 console.log(deEuroAdolar(8))
 
@@ -277,7 +263,25 @@ function esVocal(letra){
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
   
+  if(letra.length===1)
+    {
+    if(letra==="a"||letra==="e"||letra==="i"||letra==="o"||letra==="u")
+      var vocal = "Es vocal"
+      else    
+      var vocal="Dato incorrecto"
+    }
+  else
+    var vocal="Dato incorrecto"
+  return vocal
 }
+console.log(esVocal("A"))
+console.log(esVocal("a"))
+console.log(esVocal("i"))
+console.log(esVocal("Oo"))
+console.log(esVocal("z"))
+console.log(esVocal("FF"))
+console.log(esVocal("AA"))
+//solo reconoce las minisculas, habria que poner en la segunda condición todas las vocales nuevamente pero en mayuscula para que las reconozca tambien
 
 
 
